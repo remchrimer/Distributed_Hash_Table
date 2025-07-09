@@ -1,0 +1,8 @@
+FROM openjdk:17
+
+ADD Bootstrap.java /app/
+
+WORKDIR /app/
+RUN javac Bootstrap.java
+
+ENTRYPOINT ["java", "Bootstrap"]

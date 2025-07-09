@@ -1,0 +1,15 @@
+FROM openjdk:17
+
+ADD Peer.java /app/
+ADD objects1.txt /app/
+ADD objects5.txt /app/
+ADD objects10.txt /app/
+ADD objects50.txt /app/
+ADD objects66.txt /app/
+ADD objects100.txt /app/
+ADD objects126.txt /app/
+
+WORKDIR /app/
+RUN javac Peer.java
+
+ENTRYPOINT ["java", "Peer"]

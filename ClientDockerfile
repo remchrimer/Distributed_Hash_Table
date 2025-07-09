@@ -1,0 +1,8 @@
+FROM openjdk:17
+
+ADD Client.java /app/
+
+WORKDIR /app/
+RUN javac Client.java
+
+ENTRYPOINT ["java", "Client"]
